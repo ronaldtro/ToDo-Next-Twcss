@@ -8,15 +8,39 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+.color-success{
+  @apply text-black font-bold bg-green-300 px-2 py-2;
+}
+
+.title{
+  @apply font-bold rounded-md text-xl;
+}
+
+.label{
+  @apply text-black font-semibold text-sm; 
+}
+
+.input-text{
+  @apply px-2 py-2 border-2 border-black bg-green-300 text-black placeholder-black;
+}
+
+.btn-success{
+  @apply text-black font-semibold bg-green-300 hover:bg-white hover:border-black border-2 border-black duration-300 px-2 py-2;
+}
+
+.btn-close{
+  @apply text-lg text-black lowercase font-semibold border-2 border-black bg-green-300 hover:bg-white duration-300 rounded-sm px-2.5 py-0.5;
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +48,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
