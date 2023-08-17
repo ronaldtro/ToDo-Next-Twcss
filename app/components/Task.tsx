@@ -8,16 +8,17 @@ import { EditTask } from "./EditTask";
 import { DeleteTask } from "./DeleteTask";
 
 interface taskProps {
+    key: string,
     task: ITask
 }
 
-export function Task({ task }: taskProps) {
+export function Task({ task, key }: taskProps) {
 
     const [onModalEdit, setOnModalEdit] = useState<boolean>(false);
     const [onModalDelete, setOnModalDelete] = useState<boolean>(false);
 
     return (
-        <tr key={task.id} className="border-black border-2">
+        <tr key={key} className="border-black border-2">
             <td className='border-r-2 border-black p-2'>{task.id}</td>
             <td className='border-r-2 border-black p-2'>{task.text}</td>
             <td className='border-r-2 border-black p-2'>

@@ -20,8 +20,8 @@ const TodoList: React.FC<TodoListProps> = ({ tasks }) => {
                 </thead>
                 <tbody>
                     {
-                     tasks.length != 0 ? tasks.map(t => (
-                        <Task task={t} />
+                     tasks.length != 0 ? tasks.map((t:ITask) => (
+                        <Task key={t.id} task={t} />
                      )) : <tr>
                             <td className="text-center">
                                 <p>** No tasks available **</p>
